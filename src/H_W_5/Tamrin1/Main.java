@@ -103,7 +103,32 @@ public class Main {
                                 isNull = false;
                                 break;
                             }
-                            case 3:
+                            case 3: {
+                                if (isNull) {
+                                    System.out.println(" your Cart is Empty");
+                                } else {
+                                    for (int i = 0; i < 5; i++) {
+                                        if (userProducts[i] == null)
+                                            break;
+                                        System.out.print((i + 1) + " : ");
+                                        System.out.println(userProducts[i].displayInformation());
+                                    }
+                                    System.out.println("which one You want to delete?");
+                                    int item = scanner.nextInt();
+                                    int count1 = count - 1;
+                                    for (int i = item - 1; i < 4; i++) {
+                                        if (userProducts[i] == null)
+                                            break;
+                                        userProducts[i] = userProducts[i + 1];
+                                        confrim[i] = confrim[i + 1];
+                                        userProducts[count1] = null;
+                                        confrim[count1] = -5;
+                                        count1--;
+                                    }
+                                }
+                                count--;
+                                break;
+                            }
                             case 4:
                             case 5:
                             default: {
