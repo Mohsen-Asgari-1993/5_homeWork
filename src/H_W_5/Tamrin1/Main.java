@@ -30,5 +30,17 @@ public class Main {
         Person writter1 = new Person("Ahamd", "Mahmud");
         Readable readable1 = new Readable("Zamin e Sukhte", 80000, writter1);
         readable1.setSubject("epic");
+
+        Products[] products = {tv, tv1, tv2, radio, radio1, shoe, shoe1, shoe2, shoe3, readable, readable1};
+        Products[] userProducts = new Products[5];
+        int[] confrim = {-5, -5, -5, -5, -5};
+        boolean isNull = true;
+        int lenght = products.length;
+        int count = 0;
+        System.out.println("1) Product list");
+        System.out.println("2) My Cart");
+        System.out.println("3) Exit");
+        System.out.println("PLease Choose a number : ");
+        int choice = scanner.nextInt();
     }
 }
