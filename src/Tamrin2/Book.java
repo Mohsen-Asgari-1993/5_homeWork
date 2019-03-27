@@ -20,6 +20,6 @@ public abstract class Book {
     public abstract void setPrice();
 
     public void displayInformation() {
-        System.out.println("Book's Title : " + this.title + "\t\tPrice : " + this.price);
+        System.out.println("Book's Title : " + this.title + "\t\tPrice : " + this.price+" $");
     }
 }
