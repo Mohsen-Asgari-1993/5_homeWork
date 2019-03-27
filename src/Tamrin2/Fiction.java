@@ -7,5 +7,8 @@ public class Fiction extends Book {
         setPrice();
     }
 
-    
+    @Override
+    public void setPrice() {
+        super.price = 24.99;
+    }
 }
