@@ -9,4 +9,9 @@ public class TV extends ElectronicsEquipments {
         this.inch = inch;
         this.type=type;
     }
+
+    @Override
+    public String displayInformation(){
+        return ("Brand: " + super.brand +"\t\tinch: "+this.inch+"\t\tEnergy Grade: "+super.energyGrade+"\t\tType: "+this.type+"\t\tPrice: "+super.price);
+    }
 }
