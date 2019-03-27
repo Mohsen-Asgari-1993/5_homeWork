@@ -69,7 +69,18 @@ public class Main {
                             break;
                         switch2:
                         switch (choice2) {
-                            case 1:
+                            case 1: {
+                                if (isNull) {
+                                    System.out.println(" your Cart is Empty");
+                                } else
+                                    for (int i = 0; i < 5; i++) {
+                                        if (userProducts[i] == null)
+                                            break;
+                                        System.out.print((i + 1) + " : ");
+                                        System.out.println(userProducts[i].displayInformation());
+                                    }
+                                break;
+                            }
                             case 2:
                             case 3:
                             case 4:
