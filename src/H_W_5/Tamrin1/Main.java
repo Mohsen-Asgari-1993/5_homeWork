@@ -129,7 +129,16 @@ public class Main {
                                 count--;
                                 break;
                             }
-                            case 4:
+                            case 4:{
+                                double total = 0;
+                                for (int i = 0; i < 5; i++) {
+                                    if (userProducts[i] == null)
+                                        break;
+                                    total += userProducts[i].getPrice();
+                                }
+                                System.out.println("Total price:" + total);
+                                break;
+                            }
                             case 5:
                             default: {
                                 System.out.println("Please enter a valid number ");
