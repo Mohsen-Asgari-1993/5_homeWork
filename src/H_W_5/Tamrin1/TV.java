@@ -12,6 +12,6 @@ public class TV extends ElectronicsEquipments {
 
     @Override
     public String displayInformation(){
-        return ("Brand: " + super.brand +"\t\tinch: "+this.inch+"\t\tEnergy Grade: "+super.energyGrade+"\t\tType: "+this.type+"\t\tPrice: "+super.price);
+        return ("TV\tBrand: " + super.brand +"\t\tinch: "+this.inch+"\t\tEnergy Grade: "+super.energyGrade+"\t\tType: "+this.type+"\t\tPrice: "+super.price);
     }
 }

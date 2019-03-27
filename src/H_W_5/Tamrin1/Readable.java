@@ -19,6 +19,6 @@ public class Readable extends Products {
 
     @Override
     public String displayInformation(){
-        return "Title: " + super.brand +"\t\tWritter: "+this.person.getFirstName()+" "+this.person.getLastName()+"\t\tSubject:"+this.subject+"\t\tPrice: "+super.price;
+        return "Book\tTitle: " + super.brand +"\t\tWritter: "+this.person.getFirstName()+" "+this.person.getLastName()+"\t\tSubject:"+this.subject+"\t\tPrice: "+super.price;
     }
 }

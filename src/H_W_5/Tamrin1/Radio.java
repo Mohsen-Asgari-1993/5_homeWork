@@ -8,6 +8,6 @@ public class Radio extends ElectronicsEquipments {
 
     @Override
     public String displayInformation(){
-        return ("Brand: " + super.brand +"\t\tEnergy Grade: "+super.energyGrade+"\t\tPrice: "+super.price);
+        return ("Radio\tBrand: " + super.brand +"\t\tEnergy Grade: "+super.energyGrade+"\t\tPrice: "+super.price);
     }
 }

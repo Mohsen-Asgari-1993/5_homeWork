@@ -167,6 +167,7 @@ public class Main {
                                     isNull = true;
                                     break;
                                 }
+                                break ;
                             }
                             default: {
                                 System.out.println("Please enter a valid number ");
@@ -184,10 +185,10 @@ public class Main {
                     } while (choice2 != 6);
                 }
 
-                default:
+                default: {
                     System.out.println("Please enter a valid number ");
                     break;
-
+                }
             }
             System.out.println("\n1) Product list");
             System.out.println("2) My Cart");
