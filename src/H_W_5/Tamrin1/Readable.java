@@ -16,4 +16,9 @@ public class Readable extends Products {
     public void setSubject(String subject) {
         this.subject = subject;
     }
+
+    @Override
+    public String displayInformation(){
+        return "Title: " + super.brand +"\t\tWritter: "+this.person.getFirstName()+" "+this.person.getLastName()+"\t\tSubject:"+this.subject+"\t\tPrice: "+super.price;
+    }
 }
