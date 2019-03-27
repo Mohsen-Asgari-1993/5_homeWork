@@ -64,9 +64,10 @@ public class Main {
                     System.out.println("6) Back");
                     System.out.println("PLease Choose a number : ");
                     int choice2 = scanner.nextInt();
+
                     do {
                         if (choice2 == 6)
-                            break;
+                            break switch1;
                         switch2:
                         switch (choice2) {
                             case 1: {
