@@ -8,4 +8,12 @@ public class Readable extends Products {
         super(brand, price);
         this.person = person;
     }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 }
