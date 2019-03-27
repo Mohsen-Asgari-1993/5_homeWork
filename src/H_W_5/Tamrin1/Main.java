@@ -42,5 +42,31 @@ public class Main {
         System.out.println("3) Exit");
         System.out.println("PLease Choose a number : ");
         int choice = scanner.nextInt();
+
+        do {
+            if (choice == 3)
+                break;
+            switch1:
+            switch (choice) {
+                case 1:{
+                    for (int i = 0; i < lenght; i++) {
+                        System.out.print(i + 1 + " : ");
+                        System.out.println(products[i].displayInformation());
+                    }
+                    break;}
+                case 2:
+                    break;
+                default:
+                    System.out.println("Please enter a valid number ");
+                    break;
+
+            }
+            System.out.println("\n1) Product list");
+            System.out.println("2) My Cart");
+            System.out.println("3) Exit");
+            System.out.println("PLease Choose a number : ");
+            choice = scanner.nextInt();
+        } while (choice != 3);
+        System.out.println(" have nice day ");
     }
 }
