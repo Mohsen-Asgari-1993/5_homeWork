@@ -48,13 +48,14 @@ public class Main {
                 break;
             switch1:
             switch (choice) {
-                case 1:{
+                case 1: {
                     for (int i = 0; i < lenght; i++) {
                         System.out.print(i + 1 + " : ");
                         System.out.println(products[i].displayInformation());
                     }
-                    break;}
-                case 2:
+                    break;
+                }
+                case 2: {
                     System.out.println("1) My Cart list");
                     System.out.println("2) Add to My Cart");
                     System.out.println("3) Edit My Cart");
@@ -63,7 +64,32 @@ public class Main {
                     System.out.println("6) Back");
                     System.out.println("PLease Choose a number : ");
                     int choice2 = scanner.nextInt();
-                    break;
+                    do {
+                        if (choice2 == 6)
+                            break;
+                        switch2:
+                        switch (choice2) {
+                            case 1:
+                            case 2:
+                            case 3:
+                            case 4:
+                            case 5:
+                            default: {
+                                System.out.println("Please enter a valid number ");
+                                break;
+                            }
+                        }
+                        System.out.println("\n1) My Cart list");
+                        System.out.println("2) Add to My Cart");
+                        System.out.println("3) Edit My Cart");
+                        System.out.println("4) My Cart Price");
+                        System.out.println("5) Final Confrimation");
+                        System.out.println("6) Back");
+                        System.out.println("PLease Choose a number : ");
+                        choice2 = scanner.nextInt();
+                    } while (choice2 != 6);
+                }
+
                 default:
                     System.out.println("Please enter a valid number ");
                     break;
