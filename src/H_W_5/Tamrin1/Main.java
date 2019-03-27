@@ -81,7 +81,28 @@ public class Main {
                                     }
                                 break;
                             }
-                            case 2:
+                            case 2: if (count == 5) {
+                                System.out.println(" Your Cart is full !!!");
+                                break;
+                            } else {
+                                for (int i = 0; i < lenght; i++) {
+                                    System.out.print(i + 1 + " : ");
+                                    System.out.println(products[i].displayInformation());
+                                }
+                                System.out.println("which one???");
+                                int item = scanner.nextInt();
+                                for (int c : confrim) {
+                                    if (c == item - 1) {
+                                        System.out.println(" you can't add this item again!!!!");
+                                        break switch2;
+                                    }
+                                }
+                                confrim[count] = item - 1;
+                                userProducts[count] = products[item - 1];
+                                count++;
+                                isNull = false;
+                                break;
+                            }
                             case 3:
                             case 4:
                             case 5:
