@@ -23,4 +23,9 @@ public class Shoe extends Products {
     public String getColor() {
         return color;
     }
+
+    @Override
+    public String displayInformation() {
+        return ("Brand: " + super.brand +"\t\tColor: "+this.color+"\t\tSize: "+this.size+"\t\tPrice: "+super.price);
+    }
 }
