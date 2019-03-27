@@ -15,6 +15,20 @@ public class Main {
         Person person = new Person(firstName, lastName);
         person.setInformation();
 
-        
+        TV tv = new TV("Samsung", 2500000, "B", 42, "LED");
+        TV tv1 = new TV("LG", 47500000, "A", 65, "LED , OLED , Smart");
+        TV tv2 = new TV("X-Vision", 1685000, "C", 24, "LED");
+        Radio radio = new Radio("Panasonic", 369000, "B");
+        Radio radio1 = new Radio("Marshal", 189000, "C");
+        Shoe shoe = new Shoe("Nike", 850000, "Sport", 42, "Black");
+        Shoe shoe1 = new Shoe("Puma", 550000, "Sport", 40, "Red");
+        Shoe shoe2 = new Shoe("D & G", 1550000, "Formal", 44, "Black");
+        Shoe shoe3 = new Shoe("LC ", 450000, "Formal", 43, "Brown");
+        Person writter = new Person("Ghasem Ali", "Ferasat");
+        Readable readable = new Readable("Nakhl haye bi sar", 50000, writter);
+        readable.setSubject("epic");
+        Person writter1 = new Person("Ahamd", "Mahmud");
+        Readable readable1 = new Readable("Zamin e Sukhte", 80000, writter1);
+        readable1.setSubject("epic");
     }
 }
