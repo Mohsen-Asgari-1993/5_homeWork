@@ -81,28 +81,29 @@ public class Main {
                                     }
                                 break;
                             }
-                            case 2: if (count == 5) {
-                                System.out.println(" Your Cart is full !!!");
-                                break;
-                            } else {
-                                for (int i = 0; i < lenght; i++) {
-                                    System.out.print(i + 1 + " : ");
-                                    System.out.println(products[i].displayInformation());
-                                }
-                                System.out.println("which one???");
-                                int item = scanner.nextInt();
-                                for (int c : confrim) {
-                                    if (c == item - 1) {
-                                        System.out.println(" you can't add this item again!!!!");
-                                        break switch2;
+                            case 2:
+                                if (count == 5) {
+                                    System.out.println(" Your Cart is full !!!");
+                                    break;
+                                } else {
+                                    for (int i = 0; i < lenght; i++) {
+                                        System.out.print(i + 1 + " : ");
+                                        System.out.println(products[i].displayInformation());
                                     }
+                                    System.out.println("which one???");
+                                    int item = scanner.nextInt();
+                                    for (int c : confrim) {
+                                        if (c == item - 1) {
+                                            System.out.println(" you can't add this item again!!!!");
+                                            break switch2;
+                                        }
+                                    }
+                                    confrim[count] = item - 1;
+                                    userProducts[count] = products[item - 1];
+                                    count++;
+                                    isNull = false;
+                                    break;
                                 }
-                                confrim[count] = item - 1;
-                                userProducts[count] = products[item - 1];
-                                count++;
-                                isNull = false;
-                                break;
-                            }
                             case 3: {
                                 if (isNull) {
                                     System.out.println(" your Cart is Empty");
@@ -129,7 +130,7 @@ public class Main {
                                 count--;
                                 break;
                             }
-                            case 4:{
+                            case 4: {
                                 double total = 0;
                                 for (int i = 0; i < 5; i++) {
                                     if (userProducts[i] == null)
@@ -139,7 +140,34 @@ public class Main {
                                 System.out.println("Total price:" + total);
                                 break;
                             }
-                            case 5:
+                            case 5: {
+                                if (isNull) {
+                                    System.out.println(" your Cart is Empty");
+                                } else {
+                                    for (int h = 0; h < 4; h++) {
+                                        if (confrim[h] < confrim[h + 1]) {
+                                            int temp = confrim[h];
+                                            confrim[h] = confrim[h + 1];
+                                            confrim[h + 1] = temp;
+                                        }
+                                    }
+                                    int k = products.length - 1;
+                                    for (int i = 0; i < count; i++) {
+                                        for (int j = confrim[i]; j < products.length - 1; j++) {
+                                            products[j] = products[j + 1];
+                                        }
+                                        products[k] = null;
+                                        k--;
+                                        confrim[i] = -5;
+                                        userProducts[i] = null;
+                                    }
+                                    lenght -= count;
+
+                                    count = 0;
+                                    isNull = true;
+                                    break;
+                                }
+                            }
                             default: {
                                 System.out.println("Please enter a valid number ");
                                 break;
