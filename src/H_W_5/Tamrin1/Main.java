@@ -55,6 +55,14 @@ public class Main {
                     }
                     break;}
                 case 2:
+                    System.out.println("1) My Cart list");
+                    System.out.println("2) Add to My Cart");
+                    System.out.println("3) Edit My Cart");
+                    System.out.println("4) My Cart Price");
+                    System.out.println("5) Final Confrimation");
+                    System.out.println("6) Back");
+                    System.out.println("PLease Choose a number : ");
+                    int choice2 = scanner.nextInt();
                     break;
                 default:
                     System.out.println("Please enter a valid number ");
