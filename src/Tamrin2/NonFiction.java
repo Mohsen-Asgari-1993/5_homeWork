@@ -6,4 +6,9 @@ public class NonFiction extends Book {
         super(title);
         setPrice();
     }
+
+    @Override
+    public void setPrice() {
+        super.price = 37.99;
+    }
 }
