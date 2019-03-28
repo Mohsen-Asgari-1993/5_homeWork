@@ -7,11 +7,11 @@ public abstract class PhoneCall {
 
     public PhoneCall(String phoneNumber){
         this.phoneNumber=phoneNumber;
-        this.price=0.0;
+        setPrice();
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPrice() {
+        this.price = 0.0;
     }
 
     public abstract String getPhoneNumber();
