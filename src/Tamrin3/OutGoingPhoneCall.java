@@ -9,4 +9,8 @@ public class OutGoingPhoneCall extends PhoneCall {
         setPrice();
         this.time = time;
     }
+
+    public int getTime(){
+        return this.time;
+    }
 }
