@@ -6,4 +6,15 @@ public class OnlineNewspaperSubscription extends NewspaperSubscription {
         super.name = name;
         setAddress(address);
     }
+
+    @Override
+    public void setAddress(String address) {
+        super.address = address;
+        if (address.contains("@")) {
+            super.rate = "$9";
+        } else {
+            super.rate = "$0";
+            System.out.println("Error : wrong address imported");
+        }
+    }
 }
